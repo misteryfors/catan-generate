@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор гексагональной карты</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Генератор гексагональной карты</h1>
+
+  <div class="controls">
+    <div class="board-size-selector">
+      <h3>Размер карты:</h3>
+      <label>
+        <input type="radio" name="board-size" value="small" checked> Маленькая
+      </label>
+      <label>
+        <input type="radio" name="board-size" value="medium"> Средняя
+      </label>
+      <label>
+        <input type="radio" name="board-size" value="large"> Большая
+      </label>
+      <label>
+        <input type="radio" name="board-size" value="huge"> Огромная
+      </label>
+    </div>
+
+    <div class="resource-controls">
+      <div class="resource-control">
+        <label>Пшеница 🌾</label>
+        <input type="number" id="fields-count" min="0" value="4">
+      </div>
+      <div class="resource-control">
+        <label>Лес 🌲</label>
+        <input type="number" id="forest-count" min="0" value="4">
+      </div>
+      <div class="resource-control">
+        <label>Пастбище 🐑</label>
+        <input type="number" id="pasture-count" min="0" value="4">
+      </div>
+      <div class="resource-control">
+        <label>Холмы (глина) 🧱</label>
+        <input type="number" id="hills-count" min="0" value="3">
+      </div>
+      <div class="resource-control">
+        <label>Горы ⛰️</label>
+        <input type="number" id="mountains-count" min="0" value="3">
+      </div>
+      <div class="resource-control">
+        <label>Пустыня 🏜️</label>
+        <input type="number" id="desert-count" min="0" value="1">
+      </div>
+    </div>
+
+    <div class="options">
+      <h3>Настройки генерации:</h3>
+      <label>
+        <input type="checkbox" id="random-counts" checked> Случайное количество ресурсов
+      </label>
+      <label>
+        <input type="checkbox" id="no-adjacent-same" checked> Запретить соседние одинаковые ресурсы
+      </label>
+    </div>
+
+    <button id="generate-btn">Сгенерировать карту</button>
+    <button id="randomize-counts-btn">Случайные количества</button>
+    <button id="randomize-distribution-btn">Случайное распределение</button>
+  </div>
+
+  <div class="game-board-container">
+    <div id="game-board"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Цвета ресурсов */
+.hexagon.fields { --hex-color: #f1c40f; } /* Пшеница */
+.hexagon.forest { --hex-color: #27ae60; } /* Дерево */
+.hexagon.pasture { --hex-color: #2ecc71; } /* Овца */
+.hexagon.hills { --hex-color: #e67e22; } /* Кирпич */
+.hexagon.mountains { --hex-color: #95a5a6; } /* Камень */
+.hexagon.desert { --hex-color: #f5d742; } /* Пустырь */
+
+/* Номер ячейки */
+.hex-number {
+    position: absolute;
+    width: calc(var(--hex-size) * 0.4);
+    height: calc(var(--hex-size) * 0.4);
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: calc(var(--hex-size) * 0.25);
+    bottom: 15%;
+}
+
+/* Порты */
+.harbor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.harbor-item {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.hexagon.empty {
+    --hex-color: #c8e6c9; /* Светло-зеленый фон */
+    opacity: 0.6;
+    pointer-events: none; /* Не кликабельно */
+}
+
+.hexagon.empty::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="%237cb342" stroke-width="2"/></svg>') center/contain no-repeat;
+}

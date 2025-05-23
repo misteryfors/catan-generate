@@ -1,0 +1,44 @@
+.game-board-container {
+    flex: 1;
+    overflow: auto;
+    background-color: #8bc34a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.game-board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+/* Шестиугольник - базовая форма */
+.hexagon {
+    position: absolute;
+    width: var(--hex-size);
+    height: calc(var(--hex-size) * 1.1547);
+    background-color: var(--hex-color);
+    clip-path: polygon(
+            50% 0%, 100% 25%,
+            100% 75%, 50% 100%,
+            0% 75%, 0% 25%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--hex-size) * 0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hexagon:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}

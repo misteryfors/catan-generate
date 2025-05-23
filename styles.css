@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку при необходимости */
+}
+
+.board-container {
+    background-color: #8bc34a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block; /* Чтобы контейнер растягивался под содержимое */
+    min-width: auto; /* Убираем ограничение по ширине */
+    overflow: visible; /* Позволяем содержимому выходить за границы */
+}
+
+.board {
+    display: block;
+    background-color: #7cb342;
+    max-width: none; /* Убираем ограничение */
+    width: auto;
+    height: auto;
+}
+
+/* Остальные стили без изменений */
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Остальные стили остаются без изменений */
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Остальные стили оставляем как были, только меняем: */
+
+
+.hex {
+    stroke: #2c3e50;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+.hex-text {
+    font-weight: bold;
+    font-size: 14px;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.number {
+    fill: white;
+    stroke: #2c3e50;
+    stroke-width: 1.5;
+}
+
+.number-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.resource-icon {
+    font-size: 24px;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.options {
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 15px;
+}
+
+#harbors-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.harbor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.harbor-item {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на мобильных */
+    padding: 10px 0;
+    margin: -10px 0; /* Компенсируем padding */
+}
+
+/* Стиль для скроллбара (опционально) */
+.scroll-wrapper::-webkit-scrollbar {
+    height: 12px;
+}
+.scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/* Цвета ресурсов */
+.fields { fill: #f1c40f; } /* Пшеница */
+.forest { fill: #27ae60; } /* Дерево */
+.pasture { fill: #2ecc71; } /* Овца */
+.hills { fill: #e67e22; } /* Кирпич */
+.mountains { fill: #95a5a6; } /* Камень */
+.desert { fill: #f5d742; } /* Пустырь */
